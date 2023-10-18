@@ -17,7 +17,7 @@ const Navbar = () => {
        
        <li>
        <NavLink
-    to="/"
+    to="/addproduct"
     className={({ isActive, isPending }) =>
       isPending ? "pending" : isActive ? " font-bold " : ""
     }
@@ -46,7 +46,7 @@ const Navbar = () => {
     
     </>
     return (
-        <div>
+        <div className='w-[370px] lg:w-full mx-auto'>
             <UpperNavbar></UpperNavbar>
             <div className="navbar bg-[#FED700]">
   <div className="navbar-start ">

@@ -31,12 +31,12 @@ const Banner = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper "
+        className="mySwiper"
       >
         <SwiperSlide> 
-   <div className=' w-96 md:w-full '>
+   <div className=' w-96  md:w-full '>
              
-   <img className='relative  ' src={slider1} alt="" />
+   <img className='relative  w-[355px] lg:w-full ' src={slider1} alt="" />
           
           <div  data-aos-duration="2000"  data-aos="zoom-in-right" className='absolute p-8
           top-3 lg:top-24 w-96 lg:w-full lg:space-y-4'> 
