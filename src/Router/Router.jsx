@@ -10,6 +10,7 @@ import Products from "../Components/Products/Products";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/PoductDetails/ProductDetails";
 import Cart from "../Pages/Carts/Carts";
+import SignUpForm from "../Pages/SignUpForm/SignUpForm";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path:'/cart',
         element: <Cart></Cart>,
         loader:()=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/carts/`)
+      },
+      {
+        path:'/signup',
+        element: <SignUpForm></SignUpForm>
       }
     ]
   },
