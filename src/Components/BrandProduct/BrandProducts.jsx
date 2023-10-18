@@ -9,15 +9,17 @@ const BrandProducts = () => {
         .then(data=> setBrand(data))
     },[])
     return (
-         <div className='w-[370px] lg:w-full mx-auto'>
-                 <h2 className='text-3xl mx-auto text-yellow-400 w-80 my-5'>Our Dedicated Brand</h2>
-      <div className='grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto  '>
+       
+          <div className='max-w-7xl grid place-items-center'>
+            <h2 className='text-2xl my-4 text-yellow-400'>Our Brands Product</h2>
+      <div className='grid grid-cols-1 md:grid-cols-3  '>
        
             {
              brand.map(brand=> <BrandProduct key={brand.id} brand={brand}></BrandProduct>)
             }
         </div>
-         </div>
+        </div>
+  
     );
 };
 

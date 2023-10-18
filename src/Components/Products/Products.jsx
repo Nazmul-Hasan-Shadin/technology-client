@@ -4,7 +4,7 @@ import Product from './Product';
 import { useLoaderData } from 'react-router-dom';
 
 const Products = () => {
-    
+
     const allBrandProducts= useLoaderData();
     const [brandProducts,setBrandProducts]= useState(allBrandProducts);
   
@@ -14,7 +14,7 @@ const Products = () => {
     return (
         <div >
             <Banner></Banner>
-           <div className='grid grid-cols-1 my-10 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+           <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 my-10'>
  
                 {
                     brandProducts.map(brandProduct=><Product
