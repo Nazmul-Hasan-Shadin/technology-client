@@ -2,16 +2,7 @@ import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 const AddProduct = () => {
- 
-  // const [productInfo, setProductInfo] = useState({
-  //   productName: '',
-  //   type: '',
-  //   price: '',
-  //   rating: '',
-  //   imageUrl: '',
-  //   description: '',
-  
-  // });
+
    const handleFormSubmit =(e)=>{
         e.preventDefault();
         const form= new FormData(e.currentTarget);

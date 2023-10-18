@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Product = ({brandProduct}) => {
-    const {productName, brand,type,rating,price,description,imageUrl}= brandProduct;
+    const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct;
     return (
 <div className="card  bg-base-100 shadow ">
   <figure>
@@ -27,7 +28,7 @@ const Product = ({brandProduct}) => {
     </div>
     <span className="flex justify-between"> 
      <button className="btn">Details</button>
-     <button className="btn">Update</button>
+      <Link to={`/update/${_id}`}><button  className="btn">Update</button></Link>
     </span>
   </div>
 </div>
