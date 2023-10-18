@@ -9,7 +9,7 @@ import Product from "../Components/Products/Product";
 import Products from "../Components/Products/Products";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/PoductDetails/ProductDetails";
-import Cart from "../Pages/Cart/Cart";
+import Cart from "../Pages/Carts/Carts";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +41,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/cart',
-        element: <Cart></Cart>
+        element: <Cart></Cart>,
+        loader:()=>fetch(`http://localhost:5000/carts/`)
       }
     ]
   },
