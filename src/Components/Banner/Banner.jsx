@@ -24,7 +24,7 @@ const Banner = () => {
         <div className=' hidden md:block lg:w-1/3'>
             <LeftNavbar></LeftNavbar>
         </div>
-                <div className='lg:w-2/3'>
+                <div className='w-[360px] lg:w-2/3'>
               <Swiper
         pagination={{
           type: 'fraction',
@@ -50,7 +50,7 @@ const Banner = () => {
         
          </SwiperSlide>
         <SwiperSlide>
-        <div className=' w-96 md:w-full '>
+        <div className=' w-96  md:w-full '>
              
              <img className='relative  w-[355px] lg:w-full ' src={slider1} alt="" />
                     

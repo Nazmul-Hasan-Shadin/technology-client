@@ -1,32 +1,32 @@
 [
     {
       "id": 1,
-      "brandName": "Apple",
+      "brand": "Apple",
       "imageURL": "https://i.ibb.co/qdBktqS/carve-apple-logo-pumpkin-5.png"
     },
     {
       "id": 2,
-      "brandName": "Samsung",
+      "brand": "Samsung",
       "imageURL": "https://i.ibb.co/VMhhWRk/Samsung-logo-PNG10.png"
     },
     {
       "id": 3,
-      "brandName": "Sony",
+      "brand": "Sony",
       "imageURL": "https://i.ibb.co/dpq4dcC/Sony-logo.png"
     },
     {
       "id": 4,
-      "brandName": "Google",
+      "brand": "Google",
       "imageURL": "https://i.ibb.co/McXvsc6/Google-logo.png"
     },
     {
       "id": 5,
-      "brandName": "Intel",
+      "brand": "Intel",
       "imageURL": "https://i.ibb.co/gST4R33/Intel-Logo-2005.png"
     },
     {
       "id": 6,
-      "brandName": "Microsoft",
+      "brand": "Microsoft",
       "imageURL": "https://i.ibb.co/pz70pRP/Microsoft-Logo.png"
     }
   ]
