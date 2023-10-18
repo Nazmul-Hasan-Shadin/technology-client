@@ -30,7 +30,7 @@ const AddProduct = () => {
 
         //  send to server
 
-       fetch('http://localhost:5000/products',{
+       fetch('https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/products',{
         method: 'POST',
         headers:{
           'content-type': 'application/json',

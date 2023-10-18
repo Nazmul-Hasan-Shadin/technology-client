@@ -27,22 +27,22 @@ const router = createBrowserRouter([
       {
         path:'/products/:id',
         element: <Products></Products>,
-        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params})=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/products/${params.id}`)
       },
       {
         path:'/update/:id',
         element:<UpdateProduct></UpdateProduct>,
-        loader:({params})=>fetch(`http://localhost:5000/singleproducts/${params.id}`)
+        loader:({params})=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/singleproducts/${params.id}`)
       },
       {
         path:'/details/:id',
         element:<ProductDetails></ProductDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/singleproducts/${params.id}`)
+        loader:({params})=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/singleproducts/${params.id}`)
       },
       {
         path:'/cart',
         element: <Cart></Cart>,
-        loader:()=>fetch(`http://localhost:5000/carts/`)
+        loader:()=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/carts/`)
       }
     ]
   },

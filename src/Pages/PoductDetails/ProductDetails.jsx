@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const {productName, brand,type,rating,price,description,imageUrl,_id}= useLoaderData();
     const handleAddToCart= ()=>{
         
-        fetch('http://localhost:5000/carts',{
+        fetch('https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/carts',{
             method:'POST',
             headers: {
                 'content-type':'application/json'
