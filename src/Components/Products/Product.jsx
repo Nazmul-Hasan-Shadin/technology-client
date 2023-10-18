@@ -27,7 +27,7 @@ const Product = ({brandProduct}) => {
       <p  className="font-bold"> type: {type}</p>
     </div>
     <span className="flex justify-between"> 
-     <button className="btn">Details</button>
+     <Link to={`/details/${_id}`}> <button className="btn">Details</button></Link>
       <Link to={`/update/${_id}`}><button  className="btn">Update</button></Link>
     </span>
   </div>
