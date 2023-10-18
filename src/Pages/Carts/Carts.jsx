@@ -13,7 +13,7 @@ const Carts = () => {
         <div className=' grid grid-cols-1 lg:grid-cols-3 gap-2 max-w-7xl mx-auto'>
          
             {
-                cart.map((cart)=> <Cart cart={cart} key={cart._id}></Cart>)
+                cart.map((singleCart)=> <Cart setCart={setCart} cart={cart} singleCart={singleCart} key={cart._id}></Cart>)
             }
 
         </div>

@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
-const Cart = ({cart}) => {
-    const {productName, brand,type,rating,price,description,imageUrl,_id}= cart;
+const Cart = ({cart,setCart,singleCart}) => {
+
+   
+    const {productName, brand,type,rating,price,description,imageUrl,_id}= singleCart;
+
+
+
+    const handleDelete=(id)=>{
+        console.log(id);
+      fetch(`http://localhost:5000/delete/${id}`,{
+        method: 'DELETE'
+      })
+      .then(res=> res.json())
+      .then(result=>{
+        if (result.deletedCount>0) {
+            toast.success('Successfully Deleted!')
+            const remaining = cart.filter(cart => cart._id !== id);
+            setCart(remaining)
+        }
+      })
+    }
     return (
         <div>
             <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-light">
@@ -28,7 +48,10 @@ const Cart = ({cart}) => {
                             price
                          }
                      </p>
-                     <Link>    <button className='btn  btn-sm lg:btn-md'>Details</button></Link>
+                   <span className='flex gap-3'>
+                   <Link>    <button  className='btn  btn-sm lg:btn-md'>Details</button></Link>
+                     <button onClick={()=>handleDelete(_id)} className='btn  btn-sm lg:btn-md'>Delete</button>
+                   </span>
                  </div>
                  <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
                      $320
@@ -42,6 +65,7 @@ const Cart = ({cart}) => {
      </ul>
 </div>
 </div>
+<Toaster></Toaster>
         </div>
     );
 };
