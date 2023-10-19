@@ -13,11 +13,13 @@ import Cart from "../Pages/Carts/Carts";
 import SignUpForm from "../Pages/SignUpForm/SignUpForm";
 import LoginForm from "../Pages/LoginForm/LoginForm";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<Error></Error>,
     children: [
       {
         path:'/',

@@ -8,6 +8,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const LoginForm = () => {
+  const {handleGoogleLogin}= useContext(AuthContext)
   const location =useLocation();
   const navigate= useNavigate()
   console.log(location);
@@ -25,11 +26,25 @@ const LoginForm = () => {
         toast.success('Successfully Logged In')
        })
        .catch(error=>{
-        console.log(error.code);
+        toast.error(error.message)
        })
 
 
     }
+
+  const googleHandler=()=>{
+    handleGoogleLogin()
+    .then(res=>{
+      console.log(res)
+      navigate(location?.state? location.state : '/')
+        toast.success('Successfully Logged In')
+    })
+    .catch(err=>{
+      console.log(err);
+
+    })
+  }
+
     return (
  
   <div className='h-[100vh] p-5 lg:p-20 bg-[#F9FAFB]'>
@@ -62,7 +77,7 @@ const LoginForm = () => {
      <span>Or Continiou With</span>
 
      <span className='flex gap-10'> 
-        <button className='btn'> <FcGoogle className='text-2xl'> </FcGoogle> Google</button>
+        <button onClick={()=>googleHandler()} className='btn'> <FcGoogle className='text-2xl'> </FcGoogle> Google</button>
         <button className='btn bg-black text-white'> <AiOutlineGithub className='text-2xl'></AiOutlineGithub> Github</button>
      </span>
 
