@@ -3,10 +3,14 @@ import {AiOutlineGithub} from 'react-icons/ai'
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
 import toast from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 
 const LoginForm = () => {
+  const location =useLocation();
+  const navigate= useNavigate()
+  console.log(location);
   const{signInUser}= useContext(AuthContext)
     const handleLogin=(e)=>{
         e.preventDefault()
@@ -17,6 +21,7 @@ const LoginForm = () => {
        signInUser(email,password)
        .then(result=>{
         console.log(result);
+        navigate(location?.state? location.state : '/')
         toast.success('Successfully Logged In')
        })
        .catch(error=>{
@@ -60,6 +65,8 @@ const LoginForm = () => {
         <button className='btn'> <FcGoogle className='text-2xl'> </FcGoogle> Google</button>
         <button className='btn bg-black text-white'> <AiOutlineGithub className='text-2xl'></AiOutlineGithub> Github</button>
      </span>
+
+     <Link className='text-blue-700' to={'/signup'}> Register Now</Link>
        </div>
     </form>
   </div>

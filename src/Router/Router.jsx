@@ -12,6 +12,7 @@ import ProductDetails from "../Pages/PoductDetails/ProductDetails";
 import Cart from "../Pages/Carts/Carts";
 import SignUpForm from "../Pages/SignUpForm/SignUpForm";
 import LoginForm from "../Pages/LoginForm/LoginForm";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <AddProduct></AddProduct>
+        element: <PrivetRoute> <AddProduct></AddProduct></PrivetRoute>
       },
       {
         path:'/products/:id',
@@ -33,17 +34,17 @@ const router = createBrowserRouter([
       },
       {
         path:'/update/:id',
-        element:<UpdateProduct></UpdateProduct>,
+        element: <PrivetRoute><UpdateProduct></UpdateProduct></PrivetRoute>,
         loader:({params})=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/singleproducts/${params.id}`)
       },
       {
         path:'/details/:id',
-        element:<ProductDetails></ProductDetails>,
+        element:<PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
         loader:({params})=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/singleproducts/${params.id}`)
       },
       {
         path:'/cart',
-        element: <Cart></Cart>,
+        element: <PrivetRoute><Cart></Cart></PrivetRoute>,
         loader:()=>fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/carts/`)
       },
       {

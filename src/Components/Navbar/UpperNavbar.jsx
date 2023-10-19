@@ -1,8 +1,14 @@
-import user from '../../assets/photos/user.png'
+import avatar from '../../assets/photos/user.png'
 import {IoPeopleSharp} from 'react-icons/io5'
 import {FiShoppingCart} from 'react-icons/fi';
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProviders/AuthProviders';
+import { Link } from 'react-router-dom';
 
 const UpperNavbar = () => {
+  const {user,logOut}= useContext(AuthContext);
+ 
+  
     return (
 <div className="navbar p-0 flex-row-reverse  justify-evenly mx-auto  bg-base-100">
 
@@ -30,11 +36,26 @@ const UpperNavbar = () => {
     </div>
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="rounded-full">
-          <img  className='rounded-2xl w-10 h-10 md:w-32 md:h-32' src={user} />
+         {/* profile photo */}
+        <div className="rounded-full ">
+        {
+          user ?    <img  className='rounded-2xl w-10 h-10 md:w-32 md:h-32' src={user.photoURL} />:  <img  className='rounded-2xl w-10 h-10 md:w-32 md:h-32' src={avatar} />
+        }
+
+        {
+          user&& <span className='text-md text-black font-bold hidden md:block lg:absolute lg:top-4 -lg:left-4 md:w-80' > {user.displayName} </span>
+        }
         </div>
+
+
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <li>
+          <a className="justify-between">
+           {user?.displayName}
+            
+          </a>
+        </li>
         <li>
           <a className="justify-between">
             Profile
@@ -42,7 +63,10 @@ const UpperNavbar = () => {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+       {
+        user? <li onClick={logOut}><a>Logout</a></li>:
+        <Link to={'/signup'}><li><a>Register</a></li></Link>
+       }
       </ul>
     </div>
   </div>
