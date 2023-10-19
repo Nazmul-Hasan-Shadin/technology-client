@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-const Product = ({brandProduct}) => {
+const Product = ({brandProduct,publicProduct}) => {
     const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct;
     return (
 <div className="card  bg-base-100 shadow ">
@@ -27,8 +27,13 @@ const Product = ({brandProduct}) => {
       <p  className="font-bold"> type: {type}</p>
     </div>
     <span className="flex justify-between"> 
-     <Link to={`/details/${_id}`}> <button className="btn">Details</button></Link>
+    {
+      publicProduct?  <Link to={`/details/${_id}`}> <button className="btn">Details</button></Link>: <>
+        <Link to={`/details/${_id}`}> <button className="btn">Details</button></Link>
       <Link to={`/update/${_id}`}><button  className="btn">Update</button></Link>
+      
+      </>
+    }
     </span>
   </div>
 </div>
