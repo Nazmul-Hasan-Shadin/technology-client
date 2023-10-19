@@ -1,24 +1,38 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
+import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const SignUpForm = () => {
-     const {createUser}= useContext(AuthContext)
+     const {createUser,handleUpdateProfile}= useContext(AuthContext)
     const handleSignUp=(e)=>{
         e.preventDefault();
         const form= new FormData(e.currentTarget);
         const email= form.get('email')
-       
-          
-       
-        
-    
         const password= form.get('password')
         const name= form.get('fullname')
-        console.log(name,password,email);
+        const photo= form.get('photo')
+        console.log('hi');
+        console.log(name,photo ,'this is phot');
+
+        if (!/^(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,}$/.test(password)) {
+            toast.error("Password Should contain at least one uppercase special character and minimum length 6")
+            return
+        }
           
         createUser(email,password)
         .then(res=>{
-            console.log(res);
+            console.log(res)
+            handleUpdateProfile(name,photo)
+            .then(result=>{
+                console.log(result)
+            })
+            .catch(error=>{
+                console.log(error.message)
+            })
+              
+
+            toast.success('You have successfully register ');
         })
        .catch(err=>{
         console.log(err.message);
@@ -39,17 +53,27 @@ const SignUpForm = () => {
                             <h1 className="mb-8 text-3xl text-center">Sign up</h1>
                             <input 
                                 type="text"
+                                required
                                 className="block border border-grey-light w-full p-3 rounded mb-4"
                                 name="fullname"
                                 placeholder="Full Name" />
+
+                                       <input 
+                                       required
+                                type="text"
+                                className="block border border-grey-light w-full p-3 rounded mb-4"
+                                name="photo"
+                                placeholder="profile photo url" />
         
                             <input 
                                 type="text"
+                                required
                                 className="block border border-grey-light w-full p-3 rounded mb-4"
                                 name="email"
                                 placeholder="Email" />
         
                             <input 
+                                required
                                 type="password"
                                 className="block border border-grey-light w-full p-3 rounded mb-4"
                                 name="password"
@@ -58,7 +82,7 @@ const SignUpForm = () => {
         
                             <button
                                 type="submit"
-                                className="w-full text-center py-3 btn rounded bg-green text-black hover:bg-green-dark focus:outline-none my-1"
+                                className="w-full text-center py-3 btn rounded bg-green text-white bg-[green] focus:outline-none my-1"
                             >Create Account</button>
         
                             <div className="text-center text-sm text-grey-dark mt-4">
@@ -75,9 +99,9 @@ const SignUpForm = () => {
         
                         <div className="text-grey-dark mt-6">
                             Already have an account? 
-                            <a className="no-underline border-b border-blue text-blue" href="../login/">
-                                Log in
-                            </a>
+                            <Link  className="no-underline border-b border-blue text-blue" to={'/login'}>
+                             <span className='btn'> Log in</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

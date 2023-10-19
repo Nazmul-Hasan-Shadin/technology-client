@@ -11,6 +11,7 @@ import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/PoductDetails/ProductDetails";
 import Cart from "../Pages/Carts/Carts";
 import SignUpForm from "../Pages/SignUpForm/SignUpForm";
+import LoginForm from "../Pages/LoginForm/LoginForm";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path:'/signup',
         element: <SignUpForm></SignUpForm>
+      },
+      {
+        path:'/login',
+        element: <LoginForm></LoginForm>
       }
     ]
   },

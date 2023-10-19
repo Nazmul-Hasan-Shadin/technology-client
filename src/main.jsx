@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       
     <AuthProviders>
     <RouterProvider router={router}/>
+     <Toaster></Toaster>
       
     </AuthProviders>
    
