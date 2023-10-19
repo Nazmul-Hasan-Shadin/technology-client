@@ -1,0 +1,23 @@
+[
+    {
+      "feature": "Free Delivery",
+      "details": "Enjoy free shipping on all orders with no minimum purchase requirement.",
+      "id": 1
+    },
+    {
+      "feature": "Safe Payment",
+      "details": "Secure your transactions with our trusted and encrypted payment methods.",
+      "id": 2
+    },
+    {
+      "feature": "Shop With Confidence",
+      "details": "We guarantee the quality and authenticity of our products for your peace of mind.",
+      "id": 3
+    },
+    {
+      "feature": "Help Center",
+      "details": "Our dedicated support team is available 24/7 to assist you with any inquiries or issues.",
+      "id": 4
+    }
+  ]
+  

@@ -1,7 +1,9 @@
 
-import { Link } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const Error = () => {
+  let error = useRouteError();
+  console.error(error,'big error');
   return (
     <>
       <section className="relative w-full z-10 bg-primary py-[120px] ">

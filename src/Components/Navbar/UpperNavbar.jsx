@@ -25,8 +25,8 @@ const UpperNavbar = () => {
 
 <div className="mb-3 -mt-3 lg:mb-0">
     <span className=' text-4xl justify-center md:text-4xl flex gap-12 lg:gap-2 md:gap-14 '> 
-    <IoPeopleSharp></IoPeopleSharp>
-    <FiShoppingCart></FiShoppingCart>
+    <IoPeopleSharp className='ml-6'></IoPeopleSharp>
+   <Link to={'/cart'}>    <FiShoppingCart className='ml-6'></FiShoppingCart></Link>
     </span>
    
   </div>

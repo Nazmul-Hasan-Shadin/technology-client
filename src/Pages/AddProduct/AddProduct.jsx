@@ -48,22 +48,22 @@ const AddProduct = () => {
     return (
 
         
-  <div className='my-8'>
+  <div className='my-8  '>
        <form onSubmit={handleFormSubmit} >
-     <div className='grid grid-cols-2 gap-3 space-y-3'>
-     <input name='productName' type="text" placeholder="product Name" className="input input-bordered w-full " />
+     <div className='grid grid-cols-1 lg:grid-cols-2 place-items-center gap-3 space-y-3 '>
+     <input name='productName' type="text" placeholder="product Name" className="input input-bordered w-80 md:w-full " />
 
-<input name='brand' type="text" placeholder="brand name" className="input input-bordered w-full " />
+<input name='brand' type="text" placeholder="brand name" className="input input-bordered   w-80 md:w-full " />
 
-<input name='type' type="text" placeholder="product type" className="input input-bordered w-full " />
-<input name='price' type="text" placeholder="product price" className="input input-bordered w-full " />
-<input name='rating' type="text" placeholder="rating" className="input input-bordered w-full " />
-<input name='imageUrl' type="text" placeholder="Image Url" className="input input-bordered w-full " />
-<textarea name='description' placeholder="product description" className="textarea textarea-bordered textarea-lg  w-full max-w-xs" ></textarea>
+<input name='type' type="text" placeholder="product type" className="input input-bordered  w-80 md:w-full " />
+<input name='price' type="text" placeholder="product price" className="input input-bordered w-80 md:w-full  " />
+<input name='rating' type="text" placeholder="rating" className="input input-bordered w-80 md:w-full " />
+<input name='imageUrl' type="text" placeholder="Image Url" className="input input-bordered w-80 md:w-full " />
+<textarea name='description' placeholder="product description" className="textarea textarea-bordered textarea-lg  w-80 md:w-full  max-w-xs" ></textarea>
      </div>
 
-   <div className='py-4 '>
-   <button  type='submit' className="btn w-full btn-success">Add Product</button>
+   <div className='py-4 flex justify-center'>
+   <button  type='submit' className="btn  w-full btn-success">Add Product</button>
    </div>
 
    </form>

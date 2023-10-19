@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Product = ({brandProduct,publicProduct}) => {
-    const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct;
+    const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct || {};
     return (
 <div className="card  bg-base-100 shadow ">
   <figure>
