@@ -19,8 +19,8 @@ const Service = ({service}) => {
   };
 
     return (
-        <div className='bg-[#F7F7F7]'>
-            <div className="card  bg-base-100 shadow-xl">
+        <div className=''>
+            <div className="card dark:border   shadow-xl">
   <figure>
    {getIcon()}
     

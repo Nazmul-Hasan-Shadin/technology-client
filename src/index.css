@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+/* Light Mode Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   font-family: 'Lato', sans-serif;
+  background-color: white; /* Set background color to white in light mode */
+  color: black; /* Set text color to black in light mode */
+}
+
+/* Dark Mode Styles */
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }

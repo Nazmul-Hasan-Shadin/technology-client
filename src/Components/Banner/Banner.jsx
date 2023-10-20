@@ -24,7 +24,7 @@ const Banner = () => {
         <div className=' hidden md:block lg:w-1/3'>
             <LeftNavbar></LeftNavbar>
         </div>
-                <div className='w-[360px] lg:w-2/3'>
+                <div className='w-[360px] md:w-2/3 lg:w-2/3'>
               <Swiper
         pagination={{
           type: 'fraction',
@@ -36,7 +36,7 @@ const Banner = () => {
         <SwiperSlide> 
    <div className=' w-96  md:w-full '>
              
-   <img className='relative  w-[355px] lg:w-full ' src={slider1} alt="" />
+   <img className='relative  w-[355px] md:w-full lg:w-full ' src={slider1} alt="" />
           
           <div  data-aos-duration="2000"  data-aos="zoom-in-right" className='absolute p-8
           top-3 lg:top-24 w-96 lg:w-full lg:space-y-4'> 

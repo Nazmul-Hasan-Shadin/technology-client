@@ -50,7 +50,7 @@ const AddProduct = () => {
         
   <div className='my-8  '>
        <form onSubmit={handleFormSubmit} >
-     <div className='grid grid-cols-1 lg:grid-cols-2 place-items-center gap-3 space-y-3 '>
+     <div className='grid grid-cols-1 dark:text-white lg:grid-cols-2 place-items-center gap-3 space-y-3 '>
      <input name='productName' type="text" placeholder="product Name" className="input input-bordered w-80 md:w-full " />
 
 <input name='brand' type="text" placeholder="brand name" className="input input-bordered   w-80 md:w-full " />

@@ -2,11 +2,17 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/photos/logo.jpg'
 import UpperNavbar from './UpperNavbar';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
 
+
+
 const Navbar = () => {
+
+
+  
   const {user,logOut}= useContext(AuthContext)
+
     const links=  <>
     
     <li>
@@ -49,21 +55,21 @@ const Navbar = () => {
     
     </>
     return (
-        <div className='w-[370px] lg:w-full mx-auto'>
+        <div className=''>
             <UpperNavbar></UpperNavbar>
-            <div className="navbar  lg:w-full bg-[#FED700]">
+            <div className="navbar    bg-[#FED700]">
   <div className="navbar-start ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[30] p-2 shadow bg-base-100 rounded-box w-52 font-bold ">
+      <ul tabIndex={0} className="menu menu-sm dark:text-white dropdown-content mt-3 z-[30] p-2 shadow bg-base-100 rounded-box w-52 font-bold ">
           {
             links
           }
       </ul>
     </div>
-    <img src={logo} alt="" />
+    <img  className=' h-6 ' src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -77,6 +83,7 @@ const Navbar = () => {
     user ?  <Link  onClick={logOut}>  <button  className='btn'>Log Out</button></Link>
       :   <Link to={'/login'}>  <button  className='btn'>Login</button></Link>
    }
+
   </div>
 </div>
         </div>

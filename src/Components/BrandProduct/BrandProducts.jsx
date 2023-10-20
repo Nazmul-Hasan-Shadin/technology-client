@@ -12,7 +12,7 @@ const BrandProducts = () => {
     return (
         <>
        
-            <div className='max-w-7xl grid  place-items-center'>
+            <div className='grid  place-items-center'>
             <h2 className='text-2xl my-4 text-yellow-400'>Our Brands Product</h2>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-3  '>
        
