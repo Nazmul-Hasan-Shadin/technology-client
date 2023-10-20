@@ -4,7 +4,7 @@ const LeftNavbar = () => {
     return (
         <div>
       
-               <div className='border'>
+               <div className='border '>
         
             <span className=' block bg-[#FED700]'>
             <h2 className='text-center text-2xl  pb-4  font-bold '>All Categories</h2>
