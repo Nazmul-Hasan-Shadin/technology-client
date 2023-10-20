@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Product = ({brandProduct,publicProduct}) => {
     const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct || {};
     return (
-<div className="card  bg-base-100  shadow ">
+<div className="card  dark:bg-base-100    shadow ">
   <figure>
     <img className="w-60 h-60" src={imageUrl} alt="" />
     </figure>
   <div className="card-body">
-    <span className="flex dark:text-white ">
-        <p className="flex-1">Brand: {brand} </p>
+    <span className="flex text-black dark:text-white ">
+        <p className="flex-1 ">Brand: {brand} </p>
         <div className="rating dark:text-white rating-xs flex flex-row-reverse justify-between items-center ">
             <span className='ml-2' >  {rating} review</span>
   <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />

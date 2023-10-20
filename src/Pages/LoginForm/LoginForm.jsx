@@ -52,13 +52,13 @@ const LoginForm = () => {
        
        <div className='flex flex-col bg-[#FFFFFF] space-y-4 h-[480] w-480 items-center justify-center p-10 '>
        <h2 className='text-2xl font-bold text-center'>Sign In To Your Account</h2>
-       <label  className='space-y-4' htmlFor="email"> <span >Email Address</span>
+       <label  className='space-y-4  dark:text-white' htmlFor="email"> <span >Email Address</span>
         
        <input type="text" name='email' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
        
        </label>
      
-       <label  className='space-y-4' htmlFor="email"> <span>Your Password</span>
+       <label  className='space-y-4  dark:text-white' htmlFor="email"> <span>Your Password</span>
         
         <input type="text" name='password' placeholder="Type here" className="input input-bordered w-full max-w-xs" />
         

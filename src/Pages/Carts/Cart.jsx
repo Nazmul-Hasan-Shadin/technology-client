@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
 
 const Cart = ({cart,setCart,singleCart}) => {
 
@@ -11,17 +13,38 @@ const Cart = ({cart,setCart,singleCart}) => {
 
     const handleDelete=(id)=>{
         console.log(id);
-      fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/delete/${id}`,{
-        method: 'DELETE'
-      })
-      .then(res=> res.json())
-      .then(result=>{
-        if (result.deletedCount>0) {
-            toast.success('Successfully Deleted!')
-            const remaining = cart.filter(cart => cart._id !== id);
-            setCart(remaining)
+
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            fetch(`https://technology-server-5079gcx0i-nazmuls-projects-9122d9dc.vercel.app/delete/${id}`,{
+                method: 'DELETE'
+              })
+              .then(res=> res.json())
+              .then(result=>{
+                if (result.deletedCount>0) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    )
+        
+                    const remaining = cart.filter(cart => cart._id !== id);
+                    setCart(remaining)
+                }
+              })
+        
+
+    
         }
-      })
+    })
     }
     return (
         <div>
@@ -48,8 +71,8 @@ const Cart = ({cart,setCart,singleCart}) => {
                             price
                          }
                      </p>
-                   <span className='flex gap-3'>
-                   <Link>    <button  className='btn  btn-sm lg:btn-md'>Details</button></Link>
+                   <span className=' flex flex-col md:flex-row gap-3'>
+                   <Link to={`/details/${_id}`}>    <button  className='btn  btn-sm lg:btn-md'>Details</button></Link>
                      <button onClick={()=>handleDelete(_id)} className='btn  btn-sm lg:btn-md'>Delete</button>
                    </span>
                  </div>
