@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Product = ({brandProduct,publicProduct}) => {
     const {productName, brand,type,rating,price,description,imageUrl,_id}= brandProduct || {};
     return (
-<div className="card  dark:bg-base-100    shadow ">
+<div data-aos="zoom-out-left"  data-aos-duration="5000"className="card  dark:bg-base-100 overflow-x-hidden    shadow ">
   <figure>
     <img className="w-60 h-60" src={imageUrl} alt="" />
     </figure>

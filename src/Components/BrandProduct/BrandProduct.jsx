@@ -5,7 +5,7 @@ const BrandProduct = ({brand:brands}) => {
     return (
 
     <Link to={`/products/${brand}`}>
-     <div className="flex items-center  md:w-full h-40 mb-2 justify-evenly  dark:bg-white border border-gray-200 rounded-lg  dark:border-gray-700">
+     <div data-aos="zoom-in-up" data-aos-duration="1100" className="flex items-center  md:w-full h-40 mb-2 justify-evenly  dark:bg-white border border-gray-200 rounded-lg  dark:border-gray-700">
     <a href="#">
         <img className="rounded-t-lg  w-40  h-28 " src={imageURL} alt="" />
     </a>

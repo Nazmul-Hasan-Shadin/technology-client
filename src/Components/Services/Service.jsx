@@ -19,7 +19,7 @@ const Service = ({service}) => {
   };
 
     return (
-        <div className=''>
+        <div data-aos="zoom-out" data-aos-duration="1000" className=''>
             <div className="card dark:border   shadow-xl">
   <figure>
    {getIcon()}

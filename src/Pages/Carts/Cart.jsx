@@ -58,12 +58,12 @@ const Cart = ({cart,setCart,singleCart}) => {
                      <img className="w-40 h-40 rounded-full" src={imageUrl}  alt="Neil image"/>
                  </div>
                  <div className="flex-1 min-w-0 space-y-4">
-                     <p className="text-2xl font-medium text-gray-900 truncate ">
+                     <p className="text-2xl font-medium text-gray-900  ">
                       {productName}
                      </p>
                      <p className="text-md text-gray-500 truncate dark:text-gray-400">
                          {
-                            description.substring(0,40)
+                            description.substring(0,80)
                          }
                      </p>
                      <p className="text-lg text-yellow-500">
