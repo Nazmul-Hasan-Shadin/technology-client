@@ -27,9 +27,9 @@ const Home = () => {
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
       />
-            <Banner slider1={slider1} banner={true}> </Banner>
+            <Banner isDarkMode={isDarkMode} slider1={slider1} banner={true}> </Banner>
             <BrandProducts></BrandProducts>
-            <PopularProducts popularProducts={popularProducts}></PopularProducts>
+            <PopularProducts  popularProducts={popularProducts}></PopularProducts>
              <AdBanner></AdBanner>
              <Services></Services>
              <Footer></Footer>

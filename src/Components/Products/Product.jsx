@@ -9,7 +9,7 @@ const Product = ({brandProduct,publicProduct}) => {
     <img className="w-60 h-60" src={imageUrl} alt="" />
     </figure>
   <div  className="card-body">
-    <span className="flex text-black dark:text-white ">
+    <span className="flex dark:text-white ">
         <p className="flex-1 ">Brand: {brand} </p>
         <div className="rating dark:text-white rating-xs flex flex-row-reverse justify-between items-center ">
             <span className='ml-2' >  {rating} review</span>

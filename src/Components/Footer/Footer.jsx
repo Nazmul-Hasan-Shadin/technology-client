@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-<footer className="footer p-10 bg-base-200 text-base-content">
+<footer className="footer bg-[#CCCCCC] text-[#333333] dark:bg-black p-10 ">
   <nav>
-    <header className="footer-title">Services</header> 
-    <a className="link link-hover">Branding</a> 
+    <header  className="footer-title  ">Services</header> 
+    <a className="link link-hover dark:text-white  ">Branding</a> 
     <a className="link link-hover">Product Catalog</a> 
     <a className="link link-hover">Warranty</a> 
     <a className="link link-hover">Privacy</a>

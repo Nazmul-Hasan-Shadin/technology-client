@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper/modules';
 import LeftNavbar from '../leftNavbar/LeftNavbar';
 
-const Banner = () => {
+const Banner = ({isDarkMode}) => {
     AOS.init();
     return (
        <div className='flex pt-4'>

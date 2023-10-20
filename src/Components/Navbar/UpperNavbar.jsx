@@ -10,7 +10,7 @@ const UpperNavbar = () => {
  
   
     return (
-<div className="navbar p-0 flex-row-reverse  justify-evenly mx-auto  bg-base-100">
+<div className="navbar p-0 flex-row-reverse  justify-evenly mx-auto  bg-[#333333]">
 
   <div className="flex-col-reverse md:flex-row   gap-3 lg:gap-80   lg:flex-row-reverse">
     <div className="form-control md:flex-row md:items-center  lg:flex-row lg:items-center gap-5">
@@ -23,7 +23,7 @@ const UpperNavbar = () => {
   </div>
 
 
-<div className="mb-3 -mt-3 md:mt-3 dark:text-white lg:mb-0">
+<div className="mb-3 -mt-3 md:mt-3 text-white lg:mb-0">
     <span className=' text-4xl justify-center md:text-4xl flex gap-12 lg:gap-2 md:gap-14 '> 
     <IoPeopleSharp className='ml-6'></IoPeopleSharp>
    <Link to={'/cart'}>    <FiShoppingCart className='ml-6'></FiShoppingCart></Link>
@@ -43,7 +43,7 @@ const UpperNavbar = () => {
         }
 
         {
-          user&& <span className='text-md text-black font-bold hidden md:block lg:absolute lg:top-4 -lg:left-4 md:w-80' > {user.displayName} </span>
+          user&& <span className='text-md text-white font-bold hidden md:block lg:absolute lg:top-4 -lg:left-4 md:w-80' > {user.displayName} </span>
         }
         </div>
 

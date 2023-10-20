@@ -10,7 +10,7 @@ const LeftNavbar = () => {
             <h2 className='text-center text-2xl  pb-4  font-bold '>All Categories</h2>
             </span>
         
-                <ul className='space-y-4 ml-10 mt-8 text-gray-600 '>
+                <ul className='space-y-4 ml-10 mt-8 text-gray-600  '>
                     <li>Televison & Audio   </li>
                     <li>Computer & Networking</li>
                     <li>Mobile & Tablets</li>

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Product from '../Products/Product';
 
-const PopularProducts = ({popularProducts}) => {
+const PopularProducts = ({popularProducts,isDarkMode}) => {
     console.log(popularProducts);
       const [pcProduct ,setPcProduct]=useState([])
     useEffect(()=>{
@@ -19,7 +19,7 @@ const PopularProducts = ({popularProducts}) => {
        <h2 className='text-2xl lg:text-3xl  text-center text-orange-400'>Our Popular Products</h2>
        <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 my-10'>
         {
-            popularProducts.slice(0,4).map(brandProduct=> <Product key={brandProduct._id} publicProduct={true} brandProduct={brandProduct}></Product>)
+            popularProducts.slice(0,4).map(brandProduct=> <Product isDarkMode={isDarkMode} key={brandProduct._id} publicProduct={true} brandProduct={brandProduct}></Product>)
         }
 
         </div>
