@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({className}) => {
     return (
-<footer className="footer bg-[#CCCCCC]  text-[#333333] dark:bg-black p-10 ">
+<footer className={`footer bg-[#CCCCCC]  text-[#333333] p-10 my-10 ${className}`}>
   <nav>
     <header  className="footer-title  ">Services</header> 
     <a className="link link-hover dark:text-white  ">Branding</a> 

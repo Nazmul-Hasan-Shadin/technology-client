@@ -49,7 +49,7 @@ const UpperNavbar = () => {
 
 
       </label>
-      <ul tabIndex={0} className="mt-3 z-[7] p-2 dark:text-white shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="mt-3 z-[7] p-2 text-white shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
       <li>
           <a className="justify-between">
            {user?.displayName}

@@ -28,11 +28,11 @@ const Home = () => {
         setIsDarkMode={setIsDarkMode}
       />
             <Banner isDarkMode={isDarkMode} slider1={slider1} banner={true}> </Banner>
-            <BrandProducts></BrandProducts>
+            <BrandProducts darkforImg={isDarkMode}></BrandProducts>
             <PopularProducts  popularProducts={popularProducts}></PopularProducts>
              <AdBanner></AdBanner>
              <Services></Services>
-             <Footer></Footer>
+             <Footer className={isDarkMode ? 'dark-mode' : ''}></Footer>
 
         </div>
     );
