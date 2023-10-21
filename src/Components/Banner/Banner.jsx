@@ -52,17 +52,18 @@ const Banner = ({isDarkMode}) => {
         <SwiperSlide>
         <div className=' w-96  md:w-full '>
              
-             <img className='relative  w-[355px] lg:w-full ' src={slider1} alt="" />
+             <img className='relative  w-[355px] lg:w-full ' src='https://i.ibb.co/kycm7LK/slideshow2-2-880x430-780x480-1.jpg' alt="" />
                     
                     <div  data-aos-duration="2000"  data-aos="zoom-in-right" className='absolute p-8
                     top-3 lg:top-24 w-96 lg:w-full lg:space-y-4'> 
                  <p className='font-semibold '>    Sale Offer <span className='text-red-700'>-10% Off</span> This Week</p>
-                   <h2 className=' text-xl lg:text-3xl'>Top Trending
-                    Headphone 2019</h2>
+                   <h2 className=' text-xl lg:text-3xl'>Nikon V2
+                   HD Digital Camera</h2>
             <p className='text-xl'>Starting at <span className='text-red-700 text-3xl'>$589.00</span></p>
                     </div>
              </div>
         </SwiperSlide>
+  
      
       </Swiper>
         </div>
