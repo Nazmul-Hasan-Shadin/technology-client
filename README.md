@@ -9,6 +9,13 @@ Welcome to our Technology & Electronics website! This platform is dedicated to p
 - Integration of Google and GitHub login for user convenience
 - Fast loading times for an optimized user experience
 
+**Technology Stack:**
+- **Frontend:** React.js
+- **Backend:** Express.js
+- **Database:** MongoDB
+- **Authentication:** Firebase
+- **Additional Tools:** Tailwind CSS, HTML, CSS
+
 Explore our website to stay updated on the latest tech trends and find the perfect products to suit your needs.
 
 **Live Link:** [Visit Technology & Electronics](https://technology-electronics1.web.app/)
